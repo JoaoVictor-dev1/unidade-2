@@ -1,0 +1,133 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 25px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: #2d3748; 
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 320px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #0077cc; 
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+span {
+  font-weight: bold;
+  color: #4a5568; 
+}
+
+#botao {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  color: #2d3748;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid #d1d5db; 
+}
+
+#botao:contains("pressionado") {
+  background-color: #e53e3e; 
+  color: white;
+}
+
+#botao:contains("solto") {
+  background-color: #38a169; 
+  color: white;
+}
+
+#rosa-circulos {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 30px auto;
+}
+
+.circulo {
+  width: 42px;
+  height: 42px;
+  background-color: #edf2f7;
+  border-radius: 50%;
+  line-height: 42px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: default;
+}
+
+.circulo:hover {
+  background-color: #d1d5db;
+  color: white;
+}
+
+#norte { top: 0; left: 50%; transform: translateX(-50%); }
+#sul { bottom: 0; left: 50%; transform: translateX(-50%); }
+#leste { right: 0; top: 50%; transform: translateY(-50%); }
+#oeste { left: 0; top: 50%; transform: translateY(-50%); }
+
+#nordeste { top: 15px; right: 15px; }
+#noroeste { top: 15px; left: 15px; }
+#sudeste { bottom: 15px; right: 15px; }
+#sudoeste { bottom: 15px; left: 15px; }
+
+.centro {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e2e8f0;
+}
+
+.circulo.ativo {
+  background-color: #38a169;
+  color: white;
+  box-shadow: 0 0 8px #38a16966;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
