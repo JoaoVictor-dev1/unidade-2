@@ -3,44 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Status da BitDogLab</title>
+  <title>Desafio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Status da BitDogLab</h1>
-    <div class="grid">
-      <!-- Bloco 1: Status -->
-      <div class="card status-card">
-        <h2>Status</h2>
+  <main class="container">
+    <h1><span class="highlight">Desafio</span></h1>
+    <section class="grid">
+      <!-- Card: Status -->
+      <article class="card status-card" aria-label="Status do sistema">
+        <h2>Desafio 1: Estado do Botão</h2>
         <p><strong>Botão A:</strong> <span id="botao">Carregando...</span></p>
         <p><strong>Temperatura:</strong> <span id="temperatura">Carregando...</span> &deg;C</p>
 
-        <h2>Joystick</h2>
-        <p>X: <span id="joystick-x">-</span></p>
-        <p>Y: <span id="joystick-y">-</span></p>
-      </div>
+        <h2>Posição</h2>
+        <p><strong>X:</strong> <span id="joystick-x">-</span></p>
+        <p><strong>Y:</strong> <span id="joystick-y">-</span></p>
+      </article>
 
-      <!-- Bloco 2: Joystick + Rosa dos Ventos -->
-      <div class="card joystick-card">
-        <h2>Rosa dos Ventos</h2>
+      <!-- Card: Rosa dos Ventos -->
+      <article class="card joystick-card" aria-label="Rosa dos Ventos">
+        <h2>Desafio 2: Rosa dos Ventos</h2>
         <p>Direção: <strong id="direcao">-</strong></p>
-        <div id="rosa-circulos">
-          <div class="circulo" id="norte">N</div>
-          <div class="circulo" id="nordeste">NE</div>
-          <div class="circulo" id="leste">L</div>
-          <div class="circulo" id="sudeste">SE</div>
-          <div class="circulo" id="sul">S</div>
-          <div class="circulo" id="sudoeste">SO</div>
-          <div class="circulo" id="oeste">O</div>
-          <div class="circulo" id="noroeste">NO</div>
-          <div class="circulo centro" id="centro">•</div>
+        <div id="rosa-circulos" role="group" aria-label="Rosa dos Ventos">
+          <div class="circulo" id="norte" aria-label="Norte">N</div>
+          <div class="circulo" id="nordeste" aria-label="Nordeste">NE</div>
+          <div class="circulo" id="leste" aria-label="Leste">L</div>
+          <div class="circulo" id="sudeste" aria-label="Sudeste">SE</div>
+          <div class="circulo" id="sul" aria-label="Sul">S</div>
+          <div class="circulo" id="sudoeste" aria-label="Sudoeste">SO</div>
+          <div class="circulo" id="oeste" aria-label="Oeste">O</div>
+          <div class="circulo" id="noroeste" aria-label="Noroeste">NO</div>
+          <div class="circulo centro" id="centro" aria-label="Centro">•</div>
         </div>
-      </div>
-    </div>
-  </div>
+      </article>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
-
 </html>
